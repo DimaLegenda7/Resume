@@ -1,0 +1,77 @@
+.skills {
+    padding: clamp(60px, 8vw, 120px);
+    color: white;
+}
+
+.skills-header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.skills-header h2 {
+    font-size: clamp(32px, 5vw, 54px);
+    margin: 0;
+}
+
+.skills-header p {
+    color: #9ca3af;
+    margin-top: 10px;
+}
+
+/* GRID */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* CARD */
+
+.skill-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 20px;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(109,124,255,0.4);
+}
+
+.skill-card h3 {
+    margin-bottom: 12px;
+}
+
+/* PROGRESS BAR */
+
+.skill-bar {
+    height: 8px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    border-radius: 999px;
+    background: #6d7cff;
+}
+
+/* уровни */
+
+.skill-level.html { width: 90%; }
+.skill-level.css  { width: 85%; }
+.skill-level.js   { width: 70%; }
+.skill-level.git  { width: 75%; }
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}

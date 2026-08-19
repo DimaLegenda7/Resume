@@ -1,0 +1,66 @@
+.contacts {
+    padding: clamp(60px, 8vw, 120px);
+    color: white;
+}
+
+.contacts-header {
+    margin-bottom: 40px;
+}
+
+.contacts-header h2 {
+    font-size: clamp(32px, 5vw, 54px);
+    margin: 0;
+}
+
+.contacts-header p {
+    color: #9ca3af;
+    margin-top: 10px;
+}
+
+/* GRID */
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* CARD */
+
+.contact-card {
+    display: block;
+    text-decoration: none;
+
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+
+    padding: 20px;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(109,124,255,0.4);
+    background: rgba(109,124,255,0.05);
+}
+
+.contact-card h3 {
+    margin: 0 0 8px;
+}
+
+.contact-card span {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+}

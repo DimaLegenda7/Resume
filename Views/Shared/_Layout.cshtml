@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - Dt</title>
+
+    <link rel="stylesheet" href="~/css/base.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/hero.css" />
+    <link rel="stylesheet" href="~/css/about.css" />
+    <link rel="stylesheet" href="~/css/skills.css" />
+    <link rel="stylesheet" href="~/css/projects.css" />
+    <link rel="stylesheet" href="~/css/experience.css" />
+    <link rel="stylesheet" href="~/css/contacts.css" />
+</head>
+
+<body>
+
+    <!-- Верхняя панель -->
+
+    <header class="topbar">
+
+        <div class="logo-block">
+            <img class="logo" src="~/images/Dtg.png" alt="Dt">
+        </div>
+
+        <nav class="nav">
+
+            <a asp-controller="Home"
+               asp-action="Index">
+                Главная
+            </a>
+
+            <a href="/#about">
+                Обо мне
+            </a>
+
+            <a href="/#skills">
+                Навыки
+            </a>
+
+            <a href="/#projects">
+                Проекты
+            </a>
+
+            <a href="/#experience">
+                Опыт
+            </a>
+
+            <a href="/#contacts">
+                Контакты
+            </a>
+
+        </nav>
+
+        <a class="resume-btn"
+           href="~/files/cv.docx"
+           target="_blank">
+
+            <img src="~/images/download.svg"
+                 alt="download">
+
+            <span>
+                Скачать резюме
+            </span>
+
+        </a>
+
+    </header>
+
+    <!-- Конец верхней панели -->
+    <!-- Сюда будет вставляться Index.cshtml -->
+
+    <main>
+
+        @RenderBody()
+
+    </main>
+
+
+    <script src="~/js/site.js"
+            asp-append-version="true">
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

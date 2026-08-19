@@ -1,0 +1,173 @@
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+
+    background: #070812;
+
+    display: grid;
+
+    grid-template-columns:
+        auto
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: clamp(10px, 2vw, 30px);
+
+    padding:
+        clamp(10px, 1.5vw, 18px)
+        clamp(7px, 3vw, 9px);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-block {
+
+    justify-self: start;
+
+    display: grid;
+
+    align-items: center;
+}
+
+.logo {
+
+    width: clamp(38px, 4vw, 60px);
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+
+    display: grid;
+
+    grid-auto-flow: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: clamp(10px, 5vw, 75px);
+
+    min-width: 0;
+}
+
+.nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: clamp(11px, 3vw, 20px);
+
+    white-space: nowrap;
+
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+
+    color: #2563eb;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.resume-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    padding:
+        clamp(6px, 1vw, 10px)
+        clamp(8px, 1.5vw, 14px);
+
+    font-size: clamp(10px, 1vw, 15px);
+
+    display: grid;
+
+    grid-auto-flow: column;
+
+    align-items: center;
+
+    gap: 6px;
+
+    white-space: nowrap;
+
+    transition:
+        transform 0.3s,
+        background 0.3s;
+}
+
+.resume-btn:hover {
+
+    transform: translateY(-2px);
+
+    background: #1d4ed8;
+}
+
+.resume-btn img {
+
+    width: clamp(12px, 1vw, 16px);
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .topbar {
+
+        grid-template-columns:
+            auto
+            1fr
+            auto;
+
+        gap: 10px;
+    }
+
+    .nav {
+
+        gap: 10px;
+    }
+
+    .nav a {
+
+        font-size: 12px;
+    }
+
+    .resume-btn span {
+
+        display: none;
+    }
+
+    .resume-btn {
+
+        padding: 8px;
+    }
+}
